@@ -14,21 +14,8 @@ nav{
     // background-color: aqua;
 
     .left{
-        display: flex;
-        align-items: center;
         gap: 20px;
 
-        ul{
-            li{
-                margin-top: 17%;
-
-                transition: all 0.4s ease;
-                
-                &:hover{
-                    scale: 1.05;
-                }
-            }
-        }
 
     }
     .logo{
@@ -53,27 +40,30 @@ nav{
     
 
         }
-    ul{
-        li{
-            display: inline-block;
-            list-style: none;
-            margin: 5px 20px;
-            font-size: 20px;
-            margin-top: 7%;
+    .right{
 
-            transition: all 0.4s ease;
-                
-            &:hover{
-                scale: 1.05;
+        ul{
+            li{
+                display: inline-block;
+                list-style: none;
+                margin: 5px 20px;
+                font-size: 20px;
+                margin-top: 7%;
+    
+                transition: all 0.4s ease;
+                    
+                &:hover{
+                    scale: 1.05;
+                }
             }
+    
+            .register{
+                background-color: black;
+                color: rgb(196,231,195);
+                padding: 12px 15px;
+                margin: 20px;
+            }
+    
         }
-
-        .register{
-            background-color: black;
-            color: rgb(196,231,195);
-            padding: 12px 15px;
-            margin: 20px;
-        }
-
     }
 }

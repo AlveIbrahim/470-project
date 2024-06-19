@@ -9,14 +9,11 @@ const Navbar = () => {
                 <img src="/logo.png" alt="" />
                 <span>BS Services</span>
             </a>
-            <ul>
-                <li>Contact</li>
-            </ul>
         </div>
         <div className='right'>
             <ul>
-                <a href='/'><li>Sign in</li></a>
-                <a href='/'className="register"><li>Sign up</li></a>
+                <a href='/login'><li>Sign in</li></a>
+                <a href='/register'className="register"><li>Sign up</li></a>
             </ul>
         </div>
     </nav>
