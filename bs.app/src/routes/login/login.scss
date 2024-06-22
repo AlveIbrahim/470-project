@@ -1,6 +1,6 @@
 .login {
     height: 100%;
-    background-color: rgb(196,231,195);
+    background: linear-gradient( rgba(196,231,195,0.4), rgba(196,231,195,0.4)), url('../../Assects/ocean-5110906_1920.jpg');
   
     .formContainer {
       height: 100%;
@@ -17,6 +17,10 @@
           padding: 20px;
           border: 1px solid gray;
           border-radius: 5px;
+          background: transparent;
+          &::placeholder {
+            color: black;
+          }
         }
   
         button{
@@ -46,9 +50,14 @@
   
         a{
           font-size: 14px;
-          color: gray;
-          border-bottom: 1px solid gray;
+          color: black;
+          border-bottom: 1px solid black;
           width: max-content;
+          transition: all 0.4s ease;
+                    
+          &:hover{
+              scale: 1.05;
+          }
         }
       }
     }

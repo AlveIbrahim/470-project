@@ -5,7 +5,7 @@ import React from 'react'
 
 const Register = () => {
   return (
-    <div className="register">
+    <div className="register_main">
       <div className="formContainer">
         <form>
           <h1>Create an Account</h1>
