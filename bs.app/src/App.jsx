@@ -4,6 +4,7 @@ import Layout from './routes/layout/Layout'
 import Profile from './routes/profile/Profile';
 import Register from './routes/register/Register';
 import Login from './routes/login/login';
+import ProfileUpdatePage from './routes/profileUpdate/profileUpdate';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -30,6 +31,10 @@ const App = () => {
         {
           path: "/login",
           element: <Login/>
+        },
+        {
+          path: "/ProfileUpdatePage",
+          element: <ProfileUpdatePage/>
         }
       ]
     }

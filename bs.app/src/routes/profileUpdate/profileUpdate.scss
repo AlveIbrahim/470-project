@@ -1,0 +1,61 @@
+.profileUpdatePage {
+    height: 100%;
+    display: flex;
+    background: linear-gradient( rgba(196,231,195,0.4), rgba(196,231,195,0.4)), url('../../Assects/ocean-5110906_1920.jpg');
+  
+    .formContainer {
+      flex:3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+  
+        .item {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+  
+  
+          input {
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            background: transparent;
+          }
+        }
+        button {
+          padding: 20px;
+          border-radius: 5px;
+          border: none;
+          background-color: black;
+          color: rgb(196,231,195);
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.4s ease;
+                    
+          &:hover{
+              scale: 1.05;
+          }
+        }
+      }
+    }
+  
+    // .sideContainer {
+    //   flex: 2;
+    //   background-color: #fcf5f3;
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 20px;
+    //   align-items: center;
+    //   justify-content: center;
+  
+    //   .avatar{
+    //     width: 50%;
+    //     object-fit: cover;
+    //   }
+    // }
+  }
+  
