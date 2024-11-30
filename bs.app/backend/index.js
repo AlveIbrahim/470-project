@@ -24,7 +24,8 @@ app.use(
   session({
     secret: "SecretWord",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
+    cookie: { secure: false } 
   })
 );
 
@@ -43,7 +44,14 @@ app.post('/login', async (req, res) => {
 
     const isPasswordMatch = await bcrypt.compare(password, user.password);
     if (isPasswordMatch) {
-      // User is authenticated; you can set up session/cookie here if needed
+      
+      // Store user data in session (excluding sensitive data like password)
+      req.session.user = {
+        _id: user._id,
+        username: user.username,
+        email: user.email
+      };
+
       return res.status(200).json({ message: 'Login successful', user });
     } else {
       return res.status(400).json({ message: 'Invalid password' });
@@ -53,6 +61,17 @@ app.post('/login', async (req, res) => {
     return res.status(500).json({ message: 'Server error' });
   }
 });
+
+
+// Send user data stored in the session
+app.get('/profile', (req, res) => {
+  if (req.session.user) {
+    res.status(200).json(req.session.user);  
+  } else {
+    res.status(401).json({ message: 'Unauthorized. Please log in.' });
+  }
+});
+
 
 // API route to handle registration
 app.post('/register', async (req, res) => {
