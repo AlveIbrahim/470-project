@@ -3,38 +3,38 @@ import React, { useEffect, useState } from 'react';
 import List from '../../Components/list/List';
 import './Profile.scss';
 function ProfilePage() {
-  const [userData, setUserData] = useState(null);
-  const [error, setError] = useState("");
+  // const [userData, setUserData] = useState(null);
+  // const [error, setError] = useState("");
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await fetch('http://localhost:5000/profile', {
-          method: 'GET',
-          credentials: 'include' // Include cookies to access the session
-        });
+  // useEffect(() => {
+  //   const fetchUserData = async () => {
+  //     try {
+  //       const response = await fetch('http://localhost:5000/profile', {
+  //         method: 'GET',
+  //         credentials: 'include' // Include cookies to access the session
+  //       });
 
-        if (response.ok) {
-          const data = await response.json();
-          setUserData(data);  // Set user data in state
-        } else {
-          setError("Failed to fetch user data. Please log in.");
-        }
-      } catch (err) {
-        setError("Something went wrong. Please try again.");
-      }
-    };
+  //       if (response.ok) {
+  //         const data = await response.json();
+  //         setUserData(data);  // Set user data in state
+  //       } else {
+  //         setError("Failed to fetch user data. Please log in.");
+  //       }
+  //     } catch (err) {
+  //       setError("Something went wrong. Please try again.");
+  //     }
+  //   };
 
-    fetchUserData();
-  }, []);
+  //   fetchUserData();
+  // }, []);
 
-  if (error) {
-    return <div>{error}</div>;
-  }
+  // if (error) {
+  //   return <div>{error}</div>;
+  // }
 
-  if (!userData) {
-    return <div>Loading...</div>;  // Show loading state while fetching data
-  }
+  // if (!userData) {
+  //   return <div>Loading...</div>;  // Show loading state while fetching data
+  // }
 
   return (
     <div className="profilePage">
@@ -53,10 +53,10 @@ function ProfilePage() {
               />
             </span>
             <span>
-              Username: <b>{userData.username}</b>
+              Username: <b>John Doe</b>
             </span>
             <span>
-              E-mail: <b>{userData.email}</b>
+              E-mail: <b>john@gmail.com</b>
             </span>
           </div>
           <div className="title">
