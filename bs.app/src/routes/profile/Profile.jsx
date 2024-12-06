@@ -1,6 +1,7 @@
 //import React from 'react';
 import React, { useEffect, useState } from 'react';
 import List from '../../Components/list/List';
+import Bmicalc from '../../Components/Bmi/bmi';
 import './Profile.scss';
 function ProfilePage() {
   // const [userData, setUserData] = useState(null);
@@ -63,6 +64,7 @@ function ProfilePage() {
             <h1>Laundry</h1>
             <button>Create New Post</button>
           </div>
+          <Bmicalc/>
           <List />
           {/* <div className="title">
             <h1>Saved List</h1>
