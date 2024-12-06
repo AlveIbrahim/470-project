@@ -1,6 +1,7 @@
 //import React from 'react';
 import React, { useEffect, useState } from 'react';
 import List from '../../Components/list/List';
+import Map from '../../Components/map/Map';
 import Bmicalc from '../../Components/Bmi/bmi';
 import './Profile.scss';
 function ProfilePage() {
@@ -60,6 +61,7 @@ function ProfilePage() {
               E-mail: <b>john@gmail.com</b>
             </span>
           </div>
+          {/* <div class="bmiCircle">Fit</div> */}
           <div className="title">
             <h1>Laundry</h1>
             <button>Create New Post</button>
@@ -72,14 +74,8 @@ function ProfilePage() {
           <List /> */}
         </div>
       </div>
-      <div className="chatContainer">
-        <div className="wrapper">
-          <div className="title">
-            <h1>Grosaries</h1>
-            <button>Create New Post</button>
-          </div>
-          <List /> 
-        </div>
+      <div className="mapContainer">
+        <Map/>
       </div>
     </div>
   );

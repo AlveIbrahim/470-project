@@ -22,14 +22,17 @@ const Bmicalc=()=>{
         setBmi(bmiValue);
 
         let text="";
-        if (bmiValue<18.5){
-            text="Underweight";
+        if (weight> 150){
+            text="No hope";
+        }
+        else if (bmiValue<18.5){
+            text="Patlu";
         } else if (bmiValue>18.5 && bmiValue<25){
-            text="Normal";
+            text="Basic Bitch";
         } else if (bmiValue>25 && bmiValue<30){
-            text="Overweight";
+            text="Fluffy";
         } else{
-            text="Obese";
+            text="Dmmm";
         } 
         setMessage(text);       
 
