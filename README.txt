@@ -1,3 +1,6 @@
+install this in bs.app
+npm install react-leaflet leaflet
+
 To RUN app:
 
 1. cd to backend directory 

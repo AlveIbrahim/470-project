@@ -16,6 +16,7 @@ nav {
     // Background color change on scroll
     &.scrolled {
       background-color: rgb(196, 231, 195); // Change this to the solid color you want
+      position: fixed;
     }
   
     .left {
